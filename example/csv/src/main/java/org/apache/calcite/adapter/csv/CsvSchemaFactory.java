@@ -39,6 +39,13 @@ public class CsvSchemaFactory implements SchemaFactory {
   private CsvSchemaFactory() {
   }
 
+  /**
+   * 创建 Schema
+   * @param parentSchema Parent schema
+   * @param name Name of this schema
+   * @param operand The "operand" JSON property
+   * @return
+   */
   @Override public Schema create(SchemaPlus parentSchema, String name,
       Map<String, Object> operand) {
     final String directory = (String) operand.get("directory");

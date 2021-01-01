@@ -123,6 +123,13 @@ public class StatementTest {
     }
   }
 
+  public static void main(String[] args) throws SQLException {
+    HrConnection conn = new HrConnection();
+    StatementTest statementTest = new StatementTest();
+    String s = statementTest.prepareBindExecute(conn);
+    System.out.println(s);
+  }
+
   @Benchmark
   public String prepareBindExecute(HrConnection state) throws SQLException {
     Connection con = state.con;
