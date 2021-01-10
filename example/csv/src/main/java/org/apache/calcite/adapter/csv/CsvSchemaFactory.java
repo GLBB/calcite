@@ -49,8 +49,7 @@ public class CsvSchemaFactory implements SchemaFactory {
   @Override public Schema create(SchemaPlus parentSchema, String name,
       Map<String, Object> operand) {
     final String directory = (String) operand.get("directory");
-    final File base =
-        (File) operand.get(ModelHandler.ExtraOperand.BASE_DIRECTORY.camelName);
+    final File base = (File) operand.get(ModelHandler.ExtraOperand.BASE_DIRECTORY.camelName);
     File directoryFile = new File(directory);
     if (base != null && !directoryFile.isAbsolute()) {
       directoryFile = new File(base, directory);

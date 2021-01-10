@@ -72,6 +72,7 @@ public class StatementTest {
     HrSchema hr = new HrSchema();
     Random rnd = new Random();
     {
+      pickEmployee();
       try {
         Class.forName("org.apache.calcite.jdbc.Driver");
       } catch (ClassNotFoundException e) {
